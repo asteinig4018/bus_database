@@ -8,7 +8,9 @@ db.init_app(app)
 
 @app.route("/")
 def index():
-    routes = Route.query.all()
-    return render_template("index.html", routes=routes)
+    #routes = Route.query.all()
+    route_and_bus = db.session.query(Route,Bus).filter(Route.bus_id == Bus.id).all()
+    #print(str(temp_var.bus.company))
+    return render_template("index.html", route_and_bus=route_and_bus)
 
     

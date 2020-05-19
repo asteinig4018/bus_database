@@ -5,9 +5,10 @@
 {% endblock %}
 
 {% block body %}
-    <p>Buses</p>
-
-    <div>
+    <div style="padding-left: 5%;">
+        <h4>Buses from Singapore to Kuala Lumpur</h4>
+    </div>
+    <div style="padding:5%;">
         <table class="table">
             <tr>
                 <th scope="col">
@@ -32,31 +33,32 @@
                     Select
                 </th>
             </tr>
-            {% for route in routes %}
+            {% for route,bus in route_and_bus %}
                 <tr>
                     <td>
-                        route.id
+                        {{ route.id }}
                     </td>
                     <td>
-                        route.company
+                        {{ bus.company }}
                     </td>
                     <td>
-                        route.origin
+                        {{ route.origin }}
                     </td>
                     <td>
-                        route.destination
+                        {{ route.destination }}
                     </td>
                     <td>
-                        route.duration
+                        {{ route.duration }}
                     </td>
                     <td>
-                        route.seats_available
+                        {{ bus.seats }}
                     </td>
                     <td>
                         Select
                     </td>
                 </tr>
-
             {% endfor %}
         </table>
     </div>
+
+{% endblock %}
