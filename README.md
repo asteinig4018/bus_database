@@ -42,6 +42,8 @@ export DATABASE_URI="postgres+psycopg2:///buses"
 export FLASK_APP="application.py"
 ```
 
+Note: the URI I have specified only works because the database is hosted locally and I am a root user.
+
 #### Step 3: Setup Python
 I suggest using a virtualenv by executing
 ```
