@@ -8,7 +8,55 @@
     <p>Buses</p>
 
     <div>
-        <table>
+        <table class="table">
+            <tr>
+                <th scope="col">
+                    Route #
+                </th>
+                <th scope="col">
+                    Company
+                </th>
+                <th scope="col">
+                    Origin
+                </th>
+                <th scope="col">
+                    Destination
+                </th>
+                <th scope="col">
+                    Duration
+                </th>
+                <th scope="col">
+                    Seats available
+                </th>
+                <th scope="col">
+                    Select
+                </th>
+            </tr>
+            {% for route in routes %}
+                <tr>
+                    <td>
+                        route.id
+                    </td>
+                    <td>
+                        route.company
+                    </td>
+                    <td>
+                        route.origin
+                    </td>
+                    <td>
+                        route.destination
+                    </td>
+                    <td>
+                        route.duration
+                    </td>
+                    <td>
+                        route.seats_available
+                    </td>
+                    <td>
+                        Select
+                    </td>
+                </tr>
 
+            {% endfor %}
         </table>
     </div>
