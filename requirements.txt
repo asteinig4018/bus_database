@@ -1,3 +1,4 @@
 flask
-pymodels
+doqu
 SQLAlchemy
+flask_sqlalchemy
